@@ -1,0 +1,13 @@
+name: My First workflow
+
+on: push
+
+jobs:
+  my_first_job:
+    run-on: ubuntu-latest
+    steps:
+    - name: Hello world
+      run: echo "Hello wolrd"
+
+    - name: list files
+      run: ls
