@@ -8,7 +8,9 @@ jobs:
         steps:
             - name: checkout repo
               uses: actions/checkout@v4
+            - name: list files
+              run: ls -ltra
             - name: Add Permissions and execute script
               run: |
-                chmod +x ./generate_ascii.sh
+                chmod +x generate_ascii.sh
                 ./generate_ascii.sh
