@@ -16,4 +16,4 @@ jobs:
       run: ls
     
     - name: read README content
-      run: cat REAMDE.md 
+      run: cat README.md 
