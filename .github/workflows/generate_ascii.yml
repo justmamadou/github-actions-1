@@ -1,0 +1,18 @@
+name: Workflow to generate ascii
+
+on: push
+
+jobs:
+    generate_ascii:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout repo
+              uses: actions/checkout@v4
+            - name: install cowsay
+              run: sudo apt-get install cowsay -y
+            - name: generate ascii
+              run: cowsay -f dragon "Run for cover, I am a DRAGON...RAMR" >> dragon.txt
+            - name: List files
+              run: ls -la
+            - name: read dragon file
+              run: cat dragon.txt
