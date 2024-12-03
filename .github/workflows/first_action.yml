@@ -6,8 +6,14 @@ jobs:
   my_first_job:
     runs-on: ubuntu-latest
     steps:
-    - name: Hello world
-      run: echo "Hello wolrd"
+    - name: Checkout Repo
+      uses: actions/checkout@v4
+
+    - name: Welcome message
+      run: echo "Welcome to my repo"
 
     - name: list files
       run: ls
+    
+    - name: read README content
+      run: cat REAMDE.md 
